@@ -5,3 +5,4 @@ git clone $VAR SD
 sh ss.sh $1 $2 &
 sudo apt -y --force-yes install software-properties-common &
 sudo add-apt-repository ppa:deadsnakes/ppa
+echo 'do enter'
